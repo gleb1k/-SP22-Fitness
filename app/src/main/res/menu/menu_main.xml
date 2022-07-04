@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@id/settingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="settings"/>
+    <item
+        android:id="@id/trainingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="trainings"/>
+    <item
+        android:id="@id/statisticsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="statistics"/>
+    <item
+        android:id="@id/profileFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="profile"/>
+
+
+</menu>
