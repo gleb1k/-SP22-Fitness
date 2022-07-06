@@ -3,6 +3,15 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+ext {
+    mpandroidchartVersion = 'v3.1.0'
+}
+
+repositories {
+    //Библиотека для графиков
+    maven { url 'https://jitpack.io' }
+}
+
 android {
     compileSdk 32
 
@@ -41,6 +50,10 @@ dependencies {
 
     //Для картинок
     implementation 'com.github.bumptech.glide:glide:4.13.2'
+
+
+    //Зависимость для графиков
+    implementation "com.github.PhilJay:MPAndroidChart:$mpandroidchartVersion"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
