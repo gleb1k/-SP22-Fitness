@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_profile.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_profileinfo.xml" value="0.26875" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_settings.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_statistics.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_trainings.xml" value="0.24444444444444444" />
+        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/item_profile.xml" value="0.5" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/menu/menu_main.xml" value="0.24259259259259258" />
       </map>
     </option>
