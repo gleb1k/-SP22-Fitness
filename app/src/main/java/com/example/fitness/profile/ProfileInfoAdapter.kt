@@ -3,12 +3,12 @@ package com.example.fitness.profile
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import com.bumptech.glide.RequestManager
 import com.example.fitness.databinding.ItemProfileBinding
 
 class ProfileInfoAdapter(
     private val list: List<ProfileInfo>,
-//    private val glide: Glide,
+    private val glide: RequestManager,
     private val onItemClick: (ProfileInfo) -> Unit,
 ) : RecyclerView.Adapter<ProfileInfoHolder>() {
     override fun onCreateViewHolder(
@@ -20,7 +20,7 @@ class ProfileInfoAdapter(
             parent,
             false,
         ),
-
+        glide = glide,
         onItemClick = onItemClick
     )
 

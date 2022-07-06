@@ -5,4 +5,5 @@ data class ProfileInfo (
     val id : Int,
     val name: String,
     val url: String,
+    val value : String,
         )

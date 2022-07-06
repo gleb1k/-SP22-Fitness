@@ -7,20 +7,24 @@ object ProfileInfoRepository {
         ProfileInfo(
             id = 0,
             name = "Возраст",
+            value = "",
             url = ""
         ),
         ProfileInfo(
             id = 1,
             name = "Пол",
+            value = "",
             url = ""
         ),
         ProfileInfo(
             id = 2,
             name = "Вес",
+            value = "",
             url = ""
         ),ProfileInfo(
             id = 3,
             name = "Рост",
+            value = "",
             url = ""
         )
     )
