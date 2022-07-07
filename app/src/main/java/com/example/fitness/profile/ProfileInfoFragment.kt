@@ -1,7 +1,9 @@
 package com.example.fitness.profile
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
+import androidx.core.graphics.drawable.toDrawable
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.fitness.R
@@ -49,12 +51,20 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
 //                    textView.text = "Выбранное значение: $newVal"
 //                }
             }
+            //Пол
+            if (id.toInt() == 1) {
+                val gender = arrayOf("Мужчина","Женщина")
+                numberPicker.minValue = 0
+                numberPicker.maxValue = gender.size - 1
+                numberPicker.wrapSelectorWheel = false
+                numberPicker.displayedValues = gender
+
+            }
             //Вес
             if (id.toInt() == 2) {
                 numberPicker.minValue = 20
                 numberPicker.maxValue = 250
                 numberPicker.wrapSelectorWheel = false
-
             }
             //Рост
             if (id.toInt() == 3) {
