@@ -13,6 +13,8 @@ class ProfileInfoHolder(
     fun onBind(profileInfo: ProfileInfo){
         with(binding){
             tvName.text = profileInfo.name
+            tvValue.text = profileInfo.value
+            ivIcon.setImageResource(profileInfo.icon)
             root.setOnClickListener{
                 onItemClick(profileInfo)
             }

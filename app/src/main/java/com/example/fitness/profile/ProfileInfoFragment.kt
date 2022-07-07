@@ -5,12 +5,12 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.fitness.R
-import com.example.fitness.databinding.FragmentProfileBinding
 import com.example.fitness.databinding.FragmentProfileinfoBinding
 
 class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
     private var _binding :  FragmentProfileinfoBinding? = null
     private val binding get() = _binding!!
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -19,13 +19,16 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
         //Принимаю id от профиля
         val id = arguments?.getString(ARG_TEXT).orEmpty()
 
+        //binding.numberPicker.minValue = 0
+        //binding.numberPicker.maxValue = 250
+        //binding.numberPicker.wrapSelectorWheel = false
+
         if (id.isNotEmpty()){
             // TODO: Тимуру нужно узнать как сделать перевод этого текста на англ
             binding.tvName.text = "Укажите свой ${ProfileInfoRepository.infoList[id.toInt()].name.lowercase()}"
-
         }
-        with(binding){
-            iBtnBack.setOnClickListener{
+        with(binding) {
+            iBtnBack.setOnClickListener {
                 findNavController().navigate(
                     R.id.action_profileInfoFragment_to_profileFragment
                 )
@@ -33,15 +36,36 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
             // TODO: Сделать сохранение данных в бд (как напишут бд)
             btnSave.setOnClickListener {
                 findNavController().navigate(
-                    R.id.action_profileInfoFragment_to_profileFragment
+                    R.id.action_profileInfoFragment_to_profileFragment,
+                    ProfileFragment.createBundle(numberPicker.value.toString(),id)
                 )
             }
-        }
+            //Возраст
+            if (id.toInt() == 0) {
+                numberPicker.minValue = 14
+                numberPicker.maxValue = 100
+                numberPicker.wrapSelectorWheel = false
+//                numberPicker.setOnValueChangedListener { picker, oldVal, newVal ->
+//                    textView.text = "Выбранное значение: $newVal"
+//                }
+            }
+            //Вес
+            if (id.toInt() == 2) {
+                numberPicker.minValue = 20
+                numberPicker.maxValue = 250
+                numberPicker.wrapSelectorWheel = false
 
+            }
+            //Рост
+            if (id.toInt() == 3) {
+                numberPicker.minValue = 50
+                numberPicker.maxValue = 250
+                numberPicker.wrapSelectorWheel = false
+            }
+        }
     }
 
     companion object {
-
         private const val ARG_TEXT = "id"
 
         fun createBundle(text: String): Bundle {
