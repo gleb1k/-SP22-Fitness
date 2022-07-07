@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/activity_second.xml" value="0.2956204379562044" />
+        <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_trainings.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/item_training.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_profile.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_settings.xml" value="0.24444444444444444" />
