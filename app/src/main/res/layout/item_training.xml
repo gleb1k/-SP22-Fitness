@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
+    android:layout_height="200dp"
     android:layout_marginStart="8dp"
     android:layout_marginTop="8dp"
     android:layout_marginEnd="8dp"
@@ -20,25 +20,27 @@
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
+            android:src="@drawable/picture1090"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/picture1090" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/tv_name"
-            android:layout_width="347dp"
-            android:layout_height="49dp"
-            android:fontFamily="sans-serif-medium"
-            android:textAlignment="viewEnd"
+            android:layout_width="166dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-light"
+            android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="26sp"
+            android:textSize="22sp"
+            android:textStyle="normal"
             app:autoSizeTextType="none"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="134dp"
             tools:text="Пресс" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
