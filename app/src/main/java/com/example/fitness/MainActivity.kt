@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
 
         controller = (supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment).navController
 
+        // TODO: УБРАЛ ВЕРХНЮЮ СТРАШНУЮ ШТУКУ
+        supportActionBar!!.hide();
+
         val bottomView = findViewById<BottomNavigationView>(R.id.bottom_view)
         bottomView.setupWithNavController(controller)
     }
