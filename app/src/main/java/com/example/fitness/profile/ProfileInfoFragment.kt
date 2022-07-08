@@ -34,18 +34,12 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
                 )
             }
             // TODO: Сделать сохранение данных в бд (как напишут бд)
+            val gender = arrayOf("Мужчина","Женщина")
             btnSave.setOnClickListener {
-                var bundle : Bundle? = null
-                if (id.toInt() != 1) {
-                    bundle  = ProfileFragment.createBundle(numberPicker.value.toString(), id)
+                val bundle: Bundle = if (id.toInt() != 1) {
+                    ProfileFragment.createBundle(numberPicker.value.toString(), id)
                 } else {
-                    // TODO: ДОДЕЛАЙ СКАТИНА 
-                    bundle = ProfileFragment.createBundle(
-//                        ProfileInfoRepository.infoList[id.toInt()].name,
-                        numberPicker.setOnValueChangedListener { picker, oldVal, newVal ->
-                         newVal}.toString(),
-                        id
-                    )
+                    ProfileFragment.createBundle(gender[numberPicker.value], id)
                 }
                 findNavController().navigate(
                     R.id.action_profileInfoFragment_to_profileFragment,
@@ -63,7 +57,6 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
             }
             //Пол
             if (id.toInt() == 1) {
-                val gender = arrayOf("Мужчина","Женщина")
                 numberPicker.minValue = 0
                 numberPicker.maxValue = gender.size - 1
                 numberPicker.wrapSelectorWheel = false
