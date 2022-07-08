@@ -1,6 +1,4 @@
 <resources>
     <string name="app_name">Fitness</string>
 
-    //Заголовки (возможно не понадобятся)
-    <string name="fragment_statistics_name">Statistics</string>
 </resources>
