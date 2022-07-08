@@ -1,9 +1,7 @@
 package com.example.fitness.profile
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
-import androidx.core.graphics.drawable.toDrawable
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.fitness.R
@@ -37,11 +35,23 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
             }
             // TODO: Сделать сохранение данных в бд (как напишут бд)
             btnSave.setOnClickListener {
+                var bundle : Bundle? = null
+                if (id.toInt() != 1) {
+                    bundle  = ProfileFragment.createBundle(numberPicker.value.toString(), id)
+                } else {
+                    // TODO: ДОДЕЛАЙ СКАТИНА 
+                    bundle = ProfileFragment.createBundle(
+//                        ProfileInfoRepository.infoList[id.toInt()].name,
+                        numberPicker.setOnValueChangedListener { picker, oldVal, newVal ->
+                         newVal}.toString(),
+                        id
+                    )
+                }
                 findNavController().navigate(
                     R.id.action_profileInfoFragment_to_profileFragment,
-                    ProfileFragment.createBundle(numberPicker.value.toString(),id)
-                )
-            }
+                    bundle)
+                }
+
             //Возраст
             if (id.toInt() == 0) {
                 numberPicker.minValue = 14
