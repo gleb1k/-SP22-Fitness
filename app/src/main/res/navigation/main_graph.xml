@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/trainingsFragment"
         android:name="com.example.fitness.TrainingsFragment"
-        android:label="TrainingsFragment" />
+        android:label="TrainingsFragment" >
+        <action
+            android:id="@+id/action_trainingsFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.fitness.SettingsFragment"
@@ -32,4 +36,24 @@
             android:id="@+id/action_profileInfoFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/trainingmanFragment"
+        android:name="com.example.fitness.trainings.TrainingmanFragment"
+        android:label="TrainingmanFragment" >
+        <action
+            android:id="@+id/action_trainingmanFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingwomanFragment"
+        android:name="com.example.fitness.trainings.TrainingwomanFragment"
+        android:label="TrainingwomanFragment" >
+        <action
+            android:id="@+id/action_trainingwomanFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.fitness.trainings.SecondFragment"
+        android:label="SecondFragment" />
 </navigation>

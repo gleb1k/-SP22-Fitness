@@ -9,6 +9,12 @@ object TrainingRepository {
             "111"
         ),
         Training(
+            3,
+            "Комплекс",
+            "complex_man",
+            "111"
+        ),
+        Training(
             1,
             "Верхняя часть тела",
             "picture1089",
@@ -18,12 +24,6 @@ object TrainingRepository {
             2,
             "Нижняя часть тела",
             "down2_man",
-            "111"
-        ),
-        Training(
-            3,
-            "Комплекс",
-            "complex_man",
             "111"
         ),
         Training(
@@ -42,11 +42,6 @@ object TrainingRepository {
             6,
             "Ноги",
             "legs_man",
-            "111"
-        ),
-        Training(
-            7, "Tabata",
-            "picture1082",
             "111"
         )
     )
@@ -54,48 +49,48 @@ object TrainingRepository {
         Training(
             0,
             "Пресс",
-            "press_man",
+            "press_w",
             "111"
         ),
         Training(
             1,
             "Верхняя часть тела",
-            "picture1089",
+            "up_w",
             "111"
         ),
         Training(
             2,
             "Нижняя часть тела",
-            "down2_man",
+            "down_w",
             "111"
         ),
         Training(
             3,
             "Комплекс",
-            "complex_man",
+            "complex_w",
             "111"
         ),
         Training(
             4,
             "Похудение",
-            "pohudenie_man",
+            "picture1090",
             "111"
         ),
         Training(
             5,
             "Руки",
-            "arms_man",
+            "arms_w",
             "111"
         ),
         Training(
             6,
             "Ноги",
-            "legs_man",
+            "legs_w",
             "111"
         ),
         Training(
-            7, "Tabata",
-            "picture1082",
+            7, "Растяжка",
+            "dop_w",
             "111"
         )
     )

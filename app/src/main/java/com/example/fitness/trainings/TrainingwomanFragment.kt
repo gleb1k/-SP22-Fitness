@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bumptech.glide.Glide
 import com.example.fitness.R
@@ -30,19 +31,17 @@ class TrainingwomanFragment : Fragment(R.layout.fragment_trainingwoman) {
     ) {
         adapter = TrainingAdapter(
             TrainingRepository.training2,
-            Glide.with(this),
             context
         ) {
-            val intent = Intent(context, SecondActivity::class.java).apply {
-                putExtra("id", it.id)
-            }
-            startActivity(intent)
+            findNavController().navigate(
+                R.id.action_trainingsFragment_to_secondFragment,
+                SecondFragment.createBundle(it.id)
+            )
         }
 
-
         binding.rvTrainingwoman.setOnClickListener {
-            TrainingRepository.training.removeAt(0)
-            adapter?.updateData(TrainingRepository.training)
+            TrainingRepository.training2.removeAt(0)
+            adapter?.updateData(TrainingRepository.training2)
         }
         binding.rvTrainingwoman.adapter = adapter
         binding.rvTrainingwoman.layoutManager = GridLayoutManager(requireContext(), 1)

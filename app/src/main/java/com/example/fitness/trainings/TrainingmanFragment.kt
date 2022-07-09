@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
@@ -32,15 +33,13 @@ class TrainingmanFragment : Fragment(R.layout.fragment_trainingman) {
     ) {
         adapter = TrainingAdapter(
             TrainingRepository.training,
-            Glide.with(this),
             context
         ) {
-            val intent = Intent(context, SecondActivity::class.java).apply {
-                putExtra("id", it.id)
-            }
-            startActivity(intent)
+            findNavController().navigate(
+                R.id.action_trainingsFragment_to_secondFragment,
+                SecondFragment.createBundle(it.id)
+            )
         }
-
 
         binding.rvTrainingman.setOnClickListener {
             TrainingRepository.training.removeAt(0)

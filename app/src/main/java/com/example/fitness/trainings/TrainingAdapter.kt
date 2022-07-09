@@ -10,7 +10,6 @@ import kotlin.coroutines.coroutineContext
 
 class TrainingAdapter(
     private var list: List<Training>,
-    private val glide: RequestManager,
     private val context: Context,
     private val onItemClick: (Training) -> Unit
 ): RecyclerView.Adapter<TrainingHolder>() {
@@ -24,7 +23,6 @@ class TrainingAdapter(
             parent,
             false
         ),
-        glide = glide,
         onItemClick = onItemClick,
         context = context
     )

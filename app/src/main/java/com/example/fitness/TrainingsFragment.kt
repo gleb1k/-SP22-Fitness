@@ -16,7 +16,7 @@ class TrainingsFragment : Fragment(R.layout.fragment_trainings){
         super.onViewCreated(view, savedInstanceState)
 
         var imageResId = intArrayOf(
-            R.drawable.man3, R.drawable.woman
+            R.drawable.ic_man33, R.drawable.ic_woman3
         )
 
         val viewPager = view.findViewById<ViewPager2>(R.id.view_pager)
