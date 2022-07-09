@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Fitness</string>
+
+    <string name="btn_save">Сохранить</string>
+    <string name="profile_name">Имя</string>
+    <string name="profile_age">Возраст</string>
+    <string name="profile_weight">Вес</string>
+    <string name="profile_gender">Пол</string>
+    <string name="profile">Профиль</string>
+    
+    //Заголовки (возможно не понадобятся)
+    <string name="fragment_statistics_name">Statistics</string>
 </resources>
