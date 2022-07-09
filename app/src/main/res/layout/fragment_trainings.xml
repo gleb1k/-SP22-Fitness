@@ -5,31 +5,30 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_training"
-        android:layout_width="408dp"
-        android:layout_height="671dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
-        tools:itemCount="9"
-        tools:listitem="@layout/item_training" />
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_training"-->
+<!--        android:layout_width="408dp"-->
+<!--        android:layout_height="671dp"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tabLayout"-->
+<!--        tools:itemCount="9"-->
+<!--        tools:listitem="@layout/item_training" />-->
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="57dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/rv_training"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="@color/dark_green"
+        app:tabIndicatorHeight="4dp"
         app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:tabTextColor="@color/black"
-        app:tabIndicatorColor= "@color/dark_green"
-        app:tabIndicatorHeight= "4dp">
+        app:tabTextColor="@color/black">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
@@ -41,6 +40,17 @@
             android:layout_height="wrap_content"
             android:text="Женщины" />
 
+
     </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

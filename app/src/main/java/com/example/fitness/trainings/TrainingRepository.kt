@@ -5,50 +5,98 @@ object TrainingRepository {
         Training(
             0,
             "Пресс",
-            "picture1089",
+            "press_man",
             "111"
         ),
         Training(
             1,
-            "Бедра и ягодицы",
-            "picture1086",
+            "Верхняя часть тела",
+            "picture1089",
             "111"
         ),
         Training(
             2,
-            "Похудение",
-            "picture1090",
+            "Нижняя часть тела",
+            "down2_man",
             "111"
         ),
         Training(
             3,
-            "Руки и плечи",
-            "picture1082",
+            "Комплекс",
+            "complex_man",
             "111"
         ),
         Training(
             4,
-            "Ноги",
-            "picture1082",
+            "Похудение",
+            "pohudenie_man",
             "111"
         ),
         Training(
             5,
-            "Кардио",
-            "picture1082",
+            "Руки",
+            "arms_man",
             "111"
         ),
         Training(
             6,
-            "Идельное тело",
-            "picture1082",
+            "Ноги",
+            "legs_man",
             "111"
         ),
         Training(
-            7,
-            "Йога",
+            7, "Tabata",
             "picture1082",
             "111"
+        )
+    )
+    var training2 = arrayListOf<Training>(
+        Training(
+            0,
+            "Пресс",
+            "press_man",
+            "111"
         ),
+        Training(
+            1,
+            "Верхняя часть тела",
+            "picture1089",
+            "111"
+        ),
+        Training(
+            2,
+            "Нижняя часть тела",
+            "down2_man",
+            "111"
+        ),
+        Training(
+            3,
+            "Комплекс",
+            "complex_man",
+            "111"
+        ),
+        Training(
+            4,
+            "Похудение",
+            "pohudenie_man",
+            "111"
+        ),
+        Training(
+            5,
+            "Руки",
+            "arms_man",
+            "111"
+        ),
+        Training(
+            6,
+            "Ноги",
+            "legs_man",
+            "111"
+        ),
+        Training(
+            7, "Tabata",
+            "picture1082",
+            "111"
+        )
     )
 }
