@@ -28,7 +28,7 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
         entries.add(Entry(4f, 20f))
         entries.add(Entry(5f, 16f))
 
-        val vl = LineDataSet(entries, "My Type")
+        val vl = LineDataSet(entries, "${resources.getString(R.string.text2)}")
 
         vl.setDrawValues(false)
         vl.setDrawFilled(true)
@@ -49,7 +49,7 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
             lineChart.setTouchEnabled(true)
             lineChart.setPinchZoom(true)
             //Легенда графика и надпись при ошибке выборки данных
-            lineChart.description.text = "Days"
+            lineChart.description.text = "${resources.getString(R.string.days)}"
             lineChart.setNoDataText("No forex yet!")
             //анимация добавления данных
             lineChart.animateX(1800, Easing.EaseInExpo)

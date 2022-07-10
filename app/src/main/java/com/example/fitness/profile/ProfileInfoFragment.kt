@@ -24,8 +24,7 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
         //binding.numberPicker.wrapSelectorWheel = false
 
         if (id.isNotEmpty()){
-            // TODO: Тимуру нужно узнать как сделать перевод этого текста на англ
-            binding.tvName.text = "Укажите свой ${ProfileInfoRepository.infoList[id.toInt()].name.lowercase()}"
+            binding.tvName.text = "${resources.getString(R.string.text1)} ${ProfileInfoRepository.infoList[id.toInt()].name.lowercase()}"
         }
         with(binding) {
             iBtnBack.setOnClickListener {

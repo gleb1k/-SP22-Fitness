@@ -5,22 +5,21 @@
         android:id="@id/settingsFragment"
         android:enabled="true"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="settings"/>
+        android:title="@string/settings2"/>
     <item
         android:id="@id/trainingsFragment"
         android:enabled="true"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="trainings"/>
+        android:title="@string/trainings"/>
     <item
         android:id="@id/statisticsFragment"
         android:enabled="true"
         android:icon="@drawable/ic_statistics"
-        android:title="statistics"/>
+        android:title="@string/statistics"/>
     <item
         android:id="@id/profileFragment"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_person"
         android:title="@string/profile"/>
-
 
 </menu>

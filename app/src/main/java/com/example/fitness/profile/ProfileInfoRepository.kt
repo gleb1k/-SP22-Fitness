@@ -1,5 +1,7 @@
 package com.example.fitness.profile
 
+import android.content.Context
+import android.content.res.Resources
 import com.example.fitness.R
 
 
@@ -8,27 +10,29 @@ object ProfileInfoRepository {
     val infoList = arrayListOf<ProfileInfo>(
         ProfileInfo(
             id = 0,
-            name = "Возраст",
+            //name = Resources.getSystem().getString(R.string.profile_name),
+            //name = "${R.string.profile_age.toInt()}",
+            name="Age",
             value = "",
             icon = R.drawable.ic_sentiment_neutral,
             url = ""
         ),
         ProfileInfo(
             id = 1,
-            name = "Пол",
+            name = "Gender of the person",
             value = "",
             icon = R.drawable.ic_manwoman,
             url = ""
         ),
         ProfileInfo(
             id = 2,
-            name = "Вес",
+            name = "Weight",
             value = "",
             icon = R.drawable.ic_weight,
             url = ""
         ),ProfileInfo(
             id = 3,
-            name = "Рост",
+            name = "Height",
             value = "",
             icon = R.drawable.ic_humanheight,
             url = ""
