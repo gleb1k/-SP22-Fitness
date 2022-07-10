@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Фитнесс</string>
+
+    <string name="btn_save">Сохранить</string>
+    <string name="profile_name">Имя</string>
+    <string name="profile_age">Возраст</string>
+    <string name="profile_weight">Вес</string>
+    <string name="profile_gender">Пол</string>
+    <string name="profile">Профиль</string>
+    <string name="profile_title">Информация о профиле</string>
+    <string name="settings2">Настройки</string>
+    <string name="trainings">Тренировки</string>
+    <string name="statistics">Статистика</string>
+    <string name="days">Дни</string>
+    <string name="text1">Укажите свой</string>
+    <string name="text2">Мой Тип</string>
+    <string name="Men">Мужчина</string>
+    <string name="Woman">Женщина</string>
+    <string name="tasklist">Список задач</string>
+    
+    //Заголовки (возможно не понадобятся)
+    <string name="fragment_statistics_name">Statistics</string>
+</resources>
