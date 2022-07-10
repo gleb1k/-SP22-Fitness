@@ -7,6 +7,7 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.fitness.R
 import com.example.fitness.databinding.FragmentProfileBinding
+import com.example.fitness.profile.ProfileFragment.Companion.createBundle
 
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private var _binding: FragmentProfileBinding? = null

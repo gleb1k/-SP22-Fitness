@@ -10,4 +10,8 @@
     
     //Заголовки (возможно не понадобятся)
     <string name="fragment_statistics_name">Statistics</string>
+    
+    //Названия файлов хранения 
+    <string name="preference_weight">preference_weight</string>
+    <string name="preference_profilesettings">preference_profileSettings</string>
 </resources>
