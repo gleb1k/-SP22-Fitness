@@ -1,5 +1,8 @@
 package com.example.fitness.profile
 
+import android.content.res.Resources
+import android.provider.Settings.System.getString
+import androidx.core.content.res.TypedArrayUtils.getText
 import com.example.fitness.R
 
 

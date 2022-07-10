@@ -2,13 +2,11 @@ package com.example.fitness.profile
 
 import android.content.Context
 import android.os.Bundle
-import android.text.style.TtsSpan.ARG_TEXT
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.fitness.R
 import com.example.fitness.databinding.FragmentProfileinfoBinding
-import java.time.LocalDateTime
 
 class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
 
@@ -47,7 +45,6 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
                     R.id.action_profileInfoFragment_to_profileFragment
                 )
             }
-            // TODO: Сделать сохранение данных в бд (как напишут бд)
             val gender = arrayOf("Мужчина", "Женщина")
             btnSave.setOnClickListener {
                 val bundle: Bundle = if (id.toInt() != 1) {
@@ -59,8 +56,7 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
                     R.id.action_profileInfoFragment_to_profileFragment,
                     bundle
                 )
-
-
+            }
                 //Возраст
                 if (id.toInt() == 0) {
                     numberPicker.minValue = 14
@@ -69,7 +65,6 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
                 }
                 //Пол
                 if (id.toInt() == 1) {
-                    val gender = arrayOf("Мужчина", "Женщина")
                     numberPicker.minValue = 0
                     numberPicker.maxValue = gender.size - 1
                     numberPicker.wrapSelectorWheel = false
@@ -87,7 +82,7 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
                     numberPicker.maxValue = 250
                     numberPicker.wrapSelectorWheel = false
                 }
-            }
+
         }
     }
 

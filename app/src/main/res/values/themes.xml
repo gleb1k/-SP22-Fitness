@@ -1,16 +1,32 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+
     <style name="Theme.Fitness" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+<!--        Иконки-->
+        <item name="colorPrimary">@color/dark_green</item>
+<!--        полоска сверху-->
+        <item name="colorPrimaryVariant">@color/dark_green</item>
+        <!--Цвет текстa -->
         <item name="colorOnPrimary">@color/white</item>
+
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
+        <item name="android:colorBackground">@color/gray</item>-->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+<!--    <style name="Theme.Fitness" parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
+<!--        &lt;!&ndash; Base color attributes &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/gray</item>-->
+<!--        <item name="colorSecondary">@color/dark_green</item>-->
+<!--        <item name="colorControlHighlight">@color/gray</item>-->
+
+<!--        <item name="android:colorBackground">@color/gray</item>-->
+<!--        <item name="colorSurface">@color/dark_green</item>-->
+<!--        <item name="colorError">@color/red</item>-->
+
     </style>
 </resources>
