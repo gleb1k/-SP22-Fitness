@@ -3,6 +3,7 @@ package com.example.fitness.profile
 import com.example.fitness.R
 
 
+
 //Хранение ячеек в RecyclerView
 object ProfileInfoRepository {
     val infoList = arrayListOf<ProfileInfo>(

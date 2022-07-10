@@ -4,12 +4,12 @@
     <item
         android:id="@id/settingsFragment"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_settings"
         android:title="settings"/>
     <item
         android:id="@id/trainingsFragment"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_trainings"
         android:title="trainings"/>
     <item
         android:id="@id/statisticsFragment"
