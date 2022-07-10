@@ -27,26 +27,21 @@
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/drawable/ic_straighten_filled.xml" value="0.3125" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/drawable/ic_weight.xml" value="0.183" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/drawable/ic_weight_small.xml" value="0.183" />
+        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/drawable/layout_bg.xml" value="0.2855" />
+        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/drawable/nav_background_curved.xml" value="0.2035" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/drawable/weight-40px.xml" value="0.2265" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/activity_second.xml" value="0.2462962962962963" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_profileinfo.xml" value="0.33" />
+        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_second.xml" value="0.28229166666666666" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_settings.xml" value="0.5" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_statistics.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_trainings.xml" value="0.24444444444444444" />
+        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_trainingwoman.xml" value="0.28229166666666666" />
+        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/item_profile.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/layout/item_training.xml" value="0.28229166666666666" />
         <entry key="..\:/Users/gleb/AndroidStudioProjects/Fitness/app/src/main/res/menu/menu_main.xml" value="0.24259259259259258" />
-        <entry key="..\:/Users/korol/AndroidStudioProjects/Fitness/app/src/main/res/drawable/ic_humanheight.xml" value="0.3995" />
-        <entry key="..\:/Users/korol/AndroidStudioProjects/Fitness/app/src/main/res/drawable/ic_weight.xml" value="0.313" />
-        <entry key="..\:/Users/korol/AndroidStudioProjects/Fitness/app/src/main/res/layout/activity_main.xml" value="0.384375" />
-        <entry key="..\:/Users/korol/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_profile.xml" value="0.384375" />
-        <entry key="..\:/Users/korol/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_profileinfo.xml" value="0.24583333333333332" />
-        <entry key="..\:/Users/korol/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_settings.xml" value="0.4" />
-        <entry key="..\:/Users/korol/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_statistics.xml" value="0.21041666666666667" />
-        <entry key="..\:/Users/korol/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_trainings.xml" value="0.384375" />
-        <entry key="..\:/Users/korol/AndroidStudioProjects/Fitness/app/src/main/res/layout/fragment_weightstatistics.xml" value="0.39895833333333336" />
-        <entry key="..\:/Users/korol/AndroidStudioProjects/Fitness/app/src/main/res/layout/item_profile.xml" value="0.1787037037037037" />
-        <entry key="..\:/Users/korol/AndroidStudioProjects/Fitness/app/src/main/res/menu/menu_main.xml" value="0.4" />
       </map>
     </option>
   </component>

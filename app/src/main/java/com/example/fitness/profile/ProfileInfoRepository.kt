@@ -9,7 +9,7 @@ import com.example.fitness.R
 
 //Хранение ячеек в RecyclerView
 object ProfileInfoRepository {
-    val infoList = arrayListOf<ProfileInfo>(
+    var infoList = arrayListOf<ProfileInfo>(
         ProfileInfo(
             id = 0,
             name = "Возраст",

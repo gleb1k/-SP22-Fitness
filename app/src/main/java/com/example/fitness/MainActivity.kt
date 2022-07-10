@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         // TODO: УБРАЛ ВЕРХНЮЮ СТРАШНУЮ ШТУКУ
         supportActionBar!!.hide();
 
+
         val bottomView = findViewById<BottomNavigationView>(R.id.bottom_view)
         bottomView.setupWithNavController(controller)
     }

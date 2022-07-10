@@ -30,6 +30,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             ProfileInfoRepository.infoList[id.toInt()].value = value
         }
 
+        //recycler
         adapter = ProfileInfoAdapter(
             ProfileInfoRepository.infoList,
             Glide.with(this)
