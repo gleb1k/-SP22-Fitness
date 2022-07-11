@@ -20,10 +20,14 @@
     
     //Заголовки (возможно не понадобятся)
     <string name="fragment_statistics_name">Statistics</string>
-
-    //Названия файлов хранения
+    
+    //Названия файлов хранения 
     <string name="preference_weight">preference_weight</string>
     <string name="preference_profilesettings">preference_profileSettings</string>
+
+    //То, что не нужно переводить
+    <string name="imageDescription_arrowBack">Arrow back Icon</string>
+    <string name="imageDescription_backgroundImage">Image Background</string>
 
     <string name="btn_get_started">Start</string>
 </resources>

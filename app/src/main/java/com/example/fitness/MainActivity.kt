@@ -1,5 +1,6 @@
 package com.example.fitness
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
@@ -12,6 +13,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var controller : NavController
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,6 +23,14 @@ class MainActivity : AppCompatActivity() {
 
         // TODO: УБРАЛ ВЕРХНЮЮ СТРАШНУЮ ШТУКУ
         supportActionBar!!.hide();
+
+
+        val weightSharedPref = getSharedPreferences(
+            getString(R.string.preference_weight),
+            Context.MODE_PRIVATE
+        )
+        val editor = weightSharedPref?.edit()
+        editor?.putString("WeightDate",null)
 
 
         val bottomView = findViewById<BottomNavigationView>(R.id.bottom_view)
