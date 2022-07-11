@@ -22,7 +22,7 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
     private val binding get() = _binding!!
     val gson = GsonBuilder()
         .registerTypeAdapter(LocalDateTime::class.java, LocalDateTimeSerializer())
-        .registerTypeAdapter(LocalDateTime::class.java, LocalDateTimeDeserializer())
+        .registerTypeAdapter(LocalDateTime::class.java,LocalDateTimeDeserializer())
         .create()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -60,6 +60,7 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
                 )
             }
             val gender = arrayOf("Мужчина", "Женщина")
+
             btnSave.setOnClickListener {
 
                 if (id.toInt() == 0) {
@@ -128,55 +129,7 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
                 numberPicker.maxValue = 250
                 numberPicker.wrapSelectorWheel = false
             }
-            if (id.isNotEmpty()) {
-                binding.tvName.text =
-                    "${resources.getString(R.string.text1)} ${ProfileInfoRepository.infoList[id.toInt()].name.lowercase()}"
-            }
-            with(binding) {
-                iBtnBack.setOnClickListener {
-                    findNavController().navigate(
-                        R.id.action_profileInfoFragment_to_profileFragment
-                    )
-                }
-                val gender = arrayOf("Мужчина", "Женщина")
-                btnSave.setOnClickListener {
-                    val bundle: Bundle = if (id.toInt() != 1) {
-                        ProfileFragment.createBundle(numberPicker.value.toString(), id)
-                    } else {
-                        ProfileFragment.createBundle(gender[numberPicker.value], id)
-                    }
-                    findNavController().navigate(
-                        R.id.action_profileInfoFragment_to_profileFragment,
-                        bundle
-                    )
-                }
-                //Возраст
-                if (id.toInt() == 0) {
-                    numberPicker.minValue = 14
-                    numberPicker.maxValue = 100
-                    numberPicker.wrapSelectorWheel = false
-                }
-                //Пол
-                if (id.toInt() == 1) {
-                    numberPicker.minValue = 0
-                    numberPicker.maxValue = gender.size - 1
-                    numberPicker.wrapSelectorWheel = false
-                    numberPicker.displayedValues = gender
-                }
-                //Вес
-                if (id.toInt() == 2) {
-                    numberPicker.minValue = 20
-                    numberPicker.maxValue = 250
-                    numberPicker.wrapSelectorWheel = false
-                }
-                //Рост
-                if (id.toInt() == 3) {
-                    numberPicker.minValue = 50
-                    numberPicker.maxValue = 250
-                    numberPicker.wrapSelectorWheel = false
-                }
 
-            }
         }
     }
 

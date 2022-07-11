@@ -17,7 +17,8 @@
     <string name="Men">Men</string>
     <string name="Woman">Woman</string>
     <string name="tasklist">Task list</string>
-    
+    <string name="statistics_weight">Your weight changing dynamic</string>
+
     //Заголовки (возможно не понадобятся)
     <string name="fragment_statistics_name">Statistics</string>
     
