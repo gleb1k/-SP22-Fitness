@@ -45,4 +45,6 @@
     <string name="imageDescription_backgroundImage" translatable="false">Image Background</string>
 
     <string name="btn_get_started">Start</string>
+
+    <string name="preference_profilemoresettings">fffffffff</string>
 </resources>
