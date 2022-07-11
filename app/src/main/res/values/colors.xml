@@ -15,4 +15,12 @@
     <color name="blue">#EB49175A</color>
     <color name="dark_blue">#EB391247</color>
     <color name="blue_ripple">#9E85379F</color>
+
+
+    <color name="primary">#EB49175A</color>
+    <color name="background">#121212</color>
+    <color name="primaryVariant">#9E85379F</color>
+    <color name="onPrimary">#000000</color>
+
+
 </resources>

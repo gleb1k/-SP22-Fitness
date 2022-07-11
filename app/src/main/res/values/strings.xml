@@ -24,4 +24,6 @@
     //Названия файлов хранения
     <string name="preference_weight">preference_weight</string>
     <string name="preference_profilesettings">preference_profileSettings</string>
+
+    <string name="btn_get_started">Start</string>
 </resources>

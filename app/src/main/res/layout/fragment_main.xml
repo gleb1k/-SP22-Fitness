@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Фитнес и точка"
+        android:text="Фитнес - и точка"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="24dp"
@@ -78,7 +78,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <pl.droidsonroids.gif.GifImageView
+<!--    <pl.droidsonroids.gif.GifImageView-->
+<!--        android:id="@+id/profile_image"-->
+<!--        android:layout_width="210dp"-->
+<!--        android:layout_height="206.5dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:foregroundGravity="fill"-->
+<!--        android:foreground="@drawable/rounded_fg"-->
+<!--        android:src="@drawable/video2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.496"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
+    <ImageView
         android:id="@+id/profile_image"
         android:layout_width="210dp"
         android:layout_height="206.5dp"

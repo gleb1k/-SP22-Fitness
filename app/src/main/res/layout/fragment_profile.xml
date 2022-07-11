@@ -59,7 +59,7 @@
         android:shadowRadius="5"
         android:text="@string/profile_title"
         android:textColor="@color/white"
-        android:textSize="38sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/rv_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
