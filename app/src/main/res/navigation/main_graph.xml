@@ -55,5 +55,20 @@
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.fitness.trainings.SecondFragment"
-        android:label="SecondFragment" />
+        android:label="SecondFragment" >
+        <action
+            android:id="@+id/action_secondFragment_to_trainingsFragment"
+            app:destination="@id/trainingsFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_exerciseFragment"
+            app:destination="@id/exerciseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="com.example.fitness.trainings.ExerciseFragment"
+        android:label="ExerciseFragment" >
+        <action
+            android:id="@+id/action_exerciseFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
 </navigation>
