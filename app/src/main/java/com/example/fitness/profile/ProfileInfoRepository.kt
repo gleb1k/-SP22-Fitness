@@ -1,19 +1,16 @@
 package com.example.fitness.profile
 
-import android.content.res.Resources
-import android.provider.Settings.System.getString
-import androidx.core.content.res.TypedArrayUtils.getText
 import com.example.fitness.R
-
 
 
 //Хранение ячеек в RecyclerView
 object ProfileInfoRepository {
+
     val infoList = arrayListOf<ProfileInfo>(
         ProfileInfo(
             id = 0,
             name = "Возраст",
-            value = "",
+            value ="",
             icon = R.drawable.ic_sentiment_neutral,
             url = ""
         ),
@@ -30,7 +27,7 @@ object ProfileInfoRepository {
             value = "",
             icon = R.drawable.ic_weight,
             url = ""
-        ),ProfileInfo(
+        ), ProfileInfo(
             id = 3,
             name = "Рост",
             value = "",

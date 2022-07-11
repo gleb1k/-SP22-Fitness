@@ -1,5 +1,6 @@
 package com.example.fitness.profile
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -7,7 +8,6 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.fitness.R
 import com.example.fitness.databinding.FragmentProfileBinding
-import com.example.fitness.profile.ProfileFragment.Companion.createBundle
 
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private var _binding: FragmentProfileBinding? = null
@@ -15,9 +15,17 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
     private var adapter: ProfileInfoAdapter? = null
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentProfileBinding.bind(view)
+
+        //Файл хранения информации о пользователе(рост, возраст, пол)
+        val profileSettingsSharedPreferences = activity?.getSharedPreferences(
+            getString(R.string.preference_profilesettings),
+            Context.MODE_PRIVATE
+        )
 
         //Принимаю значение от инфыпрофиля и айди тоже надо бы
         val valueId = arguments?.getString(ARG_TEXT).orEmpty()
@@ -31,8 +39,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         }
 
         adapter = ProfileInfoAdapter(
+            profileSettingsSharedPreferences,
             ProfileInfoRepository.infoList,
-            Glide.with(this)
+            Glide.with(this),
         )
         {
             findNavController().navigate(

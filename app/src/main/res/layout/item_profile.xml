@@ -45,6 +45,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:contentDescription="@string/imageDescription_backgroundImage"
             android:id="@+id/iv_cover"
             android:layout_width="0dp"
             android:layout_height="60dp"
@@ -54,6 +55,7 @@
             />
 
         <ImageView
+            android:contentDescription="@string/imageDescription_arrowBack"
             android:id="@+id/iv_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

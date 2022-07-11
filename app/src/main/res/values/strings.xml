@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Fitness</string>
-
+    <string name="statistics_weight">Your weight changing dynamic</string>
     <string name="btn_save">Сохранить</string>
     <string name="profile_name">Имя</string>
     <string name="profile_age">Возраст</string>
@@ -14,4 +14,8 @@
     //Названия файлов хранения 
     <string name="preference_weight">preference_weight</string>
     <string name="preference_profilesettings">preference_profileSettings</string>
+
+    //То, что не нужно переводить
+    <string name="imageDescription_arrowBack">Arrow back Icon</string>
+    <string name="imageDescription_backgroundImage">Image Background</string>
 </resources>
