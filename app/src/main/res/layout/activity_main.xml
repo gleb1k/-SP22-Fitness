@@ -30,15 +30,17 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_view"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:backgroundTint="@color/blue"
+        app:itemIconTint="@color/white"
+        app:itemRippleColor="@color/white"
+        app:itemTextColor="@color/white"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/menu_main"
-        app:backgroundTint="@color/primary"
-        app:itemTextColor="@color/onPrimary"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        app:layout_constraintBottom_toBottomOf="parent"
 
-        />
+        app:menu="@menu/menu_main"
+        app:tabIconTint="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

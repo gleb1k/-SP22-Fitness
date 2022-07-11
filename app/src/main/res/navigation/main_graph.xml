@@ -62,9 +62,11 @@
         android:label="MainFragment" >
         <action
             android:id="@+id/action_mainFragment_to_trainingsFragment"
-            app:destination="@id/trainingsFragment" />
+            app:destination="@id/trainingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
         <action
             android:id="@+id/action_mainFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            app:destination="@id/profileFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
     </fragment>
 </navigation>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Фитнесс</string>
+    <string name="app_name">Фитнес</string>
 
     <string name="btn_save">Сохранить</string>
     <string name="profile_name">Имя</string>
@@ -17,7 +17,13 @@
     <string name="Men">Мужчина</string>
     <string name="Woman">Женщина</string>
     <string name="tasklist">Список задач</string>
-    
+
+    //Добавила для главного экрана
+    <string name="log_in">Зарегистрироваться</string>
+    <string name="app_name2">Фитнес — и точка</string>
+    <string name="energize">Наполни свою жизнь энергией</string>
+    <string name="do_sport">Займись спортом! Займись собой!</string>
+
     //Заголовки (возможно не понадобятся)
     <string name="fragment_statistics_name">Statistics</string>
 </resources>

@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue">
+    android:background="@color/blue_light">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Фитнес - и точка"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/app_name2"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="24dp"
@@ -26,15 +26,15 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/aclonica"
         android:gravity="center_horizontal"
-        android:text="Наполни свою жизнь энергией"
+        android:text="@string/energize"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="21dp"
-        android:textStyle="italic"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
@@ -43,11 +43,11 @@
         android:layout_width="311dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal"
-        android:text="Займись спортом! Займись собой!"
+        android:text="@string/do_sport"
         android:textColor="@color/white"
-        android:textSize="17dp"
-        android:textStyle="italic"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -72,32 +72,19 @@
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/blue"
-        android:text="Зарегистрироваться"
+        android:text="@string/log_in"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-<!--    <pl.droidsonroids.gif.GifImageView-->
-<!--        android:id="@+id/profile_image"-->
-<!--        android:layout_width="210dp"-->
-<!--        android:layout_height="206.5dp"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        android:foregroundGravity="fill"-->
-<!--        android:foreground="@drawable/rounded_fg"-->
-<!--        android:src="@drawable/video2"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.496"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
-    <ImageView
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/profile_image"
         android:layout_width="210dp"
         android:layout_height="206.5dp"
         android:layout_marginTop="40dp"
         android:foregroundGravity="fill"
-        android:foreground="@drawable/rounded_fg"
-        android:src="@drawable/video2"
+        android:src="@drawable/video3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
