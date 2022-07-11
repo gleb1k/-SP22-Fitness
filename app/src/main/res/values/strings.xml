@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Fitness</string>
-
     <string name="btn_save">Save</string>
     <string name="profile_name">Name</string>
     <string name="profile_age">Age</string>
+    <string name="statistics_weight">Your weight\'s changing dynamic</string>
     <string name="profile_weight">Weight</string>
     <string name="profile_gender">Gender</string>
     <string name="profile">Profile</string>
@@ -17,7 +17,6 @@
     <string name="Men">Men</string>
     <string name="Woman">Woman</string>
     <string name="tasklist">Task list</string>
-    <string name="statistics_weight">Your weight changing dynamic</string>
 
     //Добавила для главного экрана
     <string name="log_in">Log in</string>
@@ -27,14 +26,14 @@
 
     //Заголовки (возможно не понадобятся)
     <string name="fragment_statistics_name">Statistics</string>
-    
-    //Названия файлов хранения 
-    <string name="preference_weight">preference_weight</string>
-    <string name="preference_profilesettings">preference_profileSettings</string>
+
+    //Названия файлов хранения
+    <string name="preference_weight" translatable="false">preference_weight</string>
+    <string name="preference_profilesettings" translatable="false">preference_profileSettings</string>
 
     //То, что не нужно переводить
-    <string name="imageDescription_arrowBack">Arrow back Icon</string>
-    <string name="imageDescription_backgroundImage">Image Background</string>
+    <string name="imageDescription_arrowBack" translatable="false">Arrow back Icon</string>
+    <string name="imageDescription_backgroundImage" translatable="false">Image Background</string>
 
-    <string name="btn_get_started">Start</string>
+    <string name="btn_get_started"></string>
 </resources>

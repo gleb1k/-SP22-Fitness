@@ -26,4 +26,5 @@
 
     //Заголовки (возможно не понадобятся)
     <string name="fragment_statistics_name">Statistics</string>
+    <string name="statistics_weight">Динамика изменения вашего веса</string>
 </resources>

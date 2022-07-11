@@ -7,14 +7,19 @@ import androidx.fragment.app.Fragment
 import com.example.fitness.databinding.FragmentStatisticsBinding
 import com.example.fitness.profile.ProfileInfoFragment
 import com.github.mikephil.charting.animation.Easing
+import com.github.mikephil.charting.components.AxisBase
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.formatter.ValueFormatter
 import com.google.gson.*
+import com.google.gson.internal.bind.util.ISO8601Utils.format
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
+import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.time.ZoneOffset
+import java.util.*
 import kotlin.collections.ArrayList
 
 
@@ -54,7 +59,7 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
                 arr[i].Weight.toFloat())
             )
         }
-        val vl = LineDataSet(entries, "My Type")
+        val vl = LineDataSet(entries,"Ваш вес")
 
         vl.setDrawValues(false)
         vl.setDrawFilled(true)
@@ -70,19 +75,19 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
             lineChart.xAxis.labelRotationAngle = 0f
             //удаление правой оси
             lineChart.axisRight.isEnabled = false
-            lineChart.xAxis.axisMaximum = 0.1f
+            lineChart.xAxis.isEnabled = false
             //Позволяет зумить график
-            lineChart.setTouchEnabled(true)
+            lineChart.setTouchEnabled(false)
             lineChart.setPinchZoom(false)
             //Легенда графика и надпись при ошибке выборки данных
-            lineChart.description.text = "${resources.getString(R.string.days)}"
+            lineChart.description.isEnabled = false
             lineChart.setNoDataText("No forex yet!")
-            //анимация добавления данных
-            lineChart.animateX(1800, Easing.EaseInExpo)
         }
     }
-
 }
+
+
+
 
 class LocalDateTimeDeserializer : JsonDeserializer<LocalDateTime> {
     override fun deserialize(
