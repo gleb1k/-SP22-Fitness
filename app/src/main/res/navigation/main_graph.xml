@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_graph"
-    app:startDestination="@id/trainingsFragment">
+    app:startDestination="@id/mainFragment">
 
     <fragment
         android:id="@+id/trainingsFragment"
@@ -56,4 +56,15 @@
         android:id="@+id/secondFragment"
         android:name="com.example.fitness.trainings.SecondFragment"
         android:label="SecondFragment" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.fitness.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_trainingsFragment"
+            app:destination="@id/trainingsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>
