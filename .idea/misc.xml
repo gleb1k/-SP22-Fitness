@@ -3,16 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/drawable/btn_get_started.xml" value="0.2165" />
+        <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/drawable/btn_log_in.xml" value="0.2165" />
+        <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/drawable/rounded_fg.xml" value="0.2575" />
         <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/activity_main.xml" value="0.14673913043478262" />
         <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/activity_second.xml" value="0.2956204379562044" />
-        <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_profile.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_main.xml" value="0.264" />
+        <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
         <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_profileinfo.xml" value="0.14673913043478262" />
         <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_second.xml" value="0.2" />
         <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_settings.xml" value="0.20652173913043478" />
         <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_statistics.xml" value="0.1" />
         <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_training1.xml" value="0.19610507246376813" />
         <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_trainingman.xml" value="0.264" />
-        <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_trainings.xml" value="0.1" />
+        <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_trainings.xml" value="0.264" />
         <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_trainings2.xml" value="0.19610507246376813" />
         <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/fragment_trainingwoman.xml" value="0.21197916666666666" />
         <entry key="..\:/Users/Asus/Documents/GitHub/Fitness/app/src/main/res/layout/item_profile.xml" value="0.20652173913043478" />
