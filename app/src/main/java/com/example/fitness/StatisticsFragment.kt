@@ -32,6 +32,30 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentStatisticsBinding.bind(view)
 
+        //для подсчёта индекса массы тела
+        val profileSettingsSharedPreferences = activity?.getSharedPreferences(
+            getString(R.string.preference_profilesettings),
+            Context.MODE_PRIVATE
+        )
+
+        val weight=profileSettingsSharedPreferences?.getString("2",null)?.toDoubleOrNull()
+        val height=profileSettingsSharedPreferences?.getString("3",null)?.toDoubleOrNull()
+        if (weight!=null && height!=null){
+            val result=(weight/((height/100)*height/100))
+            if (result>=18 && result<=25){
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}$result-${resources.getString(R.string.MassIndex2)}"
+            }
+            if(result>25){
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}$result-${resources.getString(R.string.MassIndex3)}"
+            }
+            if(result<18){
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}$result-${resources.getString(R.string.MassIndex4)}"
+            }
+        }
+        else{
+            binding.textView2.text="${resources.getString(R.string.BadData)}"
+        }
+
         val weightSharedPref =
             activity!!.getSharedPreferences(
                 getString(R.string.preference_weight),
@@ -59,7 +83,7 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
                 arr[i].Weight.toFloat())
             )
         }
-        val vl = LineDataSet(entries,"Ваш вес")
+        val vl = LineDataSet(entries, "My Type")
 
         vl.setDrawValues(false)
         vl.setDrawFilled(true)
@@ -75,19 +99,19 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
             lineChart.xAxis.labelRotationAngle = 0f
             //удаление правой оси
             lineChart.axisRight.isEnabled = false
-            lineChart.xAxis.isEnabled = false
+            lineChart.xAxis.axisMaximum = 0.1f
             //Позволяет зумить график
-            lineChart.setTouchEnabled(false)
+            lineChart.setTouchEnabled(true)
             lineChart.setPinchZoom(false)
             //Легенда графика и надпись при ошибке выборки данных
-            lineChart.description.isEnabled = false
+            lineChart.description.text = "${resources.getString(R.string.days)}"
             lineChart.setNoDataText("No forex yet!")
+            //анимация добавления данных
+            lineChart.animateX(1800, Easing.EaseInExpo)
         }
     }
+
 }
-
-
-
 
 class LocalDateTimeDeserializer : JsonDeserializer<LocalDateTime> {
     override fun deserialize(

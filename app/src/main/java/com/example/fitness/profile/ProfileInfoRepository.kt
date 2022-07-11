@@ -12,27 +12,27 @@ object ProfileInfoRepository {
             id = 0,
             //name = Resources.getSystem().getString(R.string.profile_name),
             //name = "${R.string.profile_age.toInt()}",
-            name="Age",
+            name="Возраст",
             value = "",
             icon = R.drawable.ic_sentiment_neutral,
             url = ""
         ),
         ProfileInfo(
             id = 1,
-            name = "Gender of the person",
+            name = "Пол",
             value = "",
             icon = R.drawable.ic_manwoman,
             url = ""
         ),
         ProfileInfo(
             id = 2,
-            name = "Weight",
+            name = "Вес",
             value = "",
             icon = R.drawable.ic_weight,
             url = ""
         ),ProfileInfo(
             id = 3,
-            name = "Height",
+            name = "Рост",
             value = "",
             icon = R.drawable.ic_humanheight,
             url = ""

@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_profileFragment_to_profileInfoFragment"
             app:destination="@id/profileInfoFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_moreProfileFragment"
+            app:destination="@id/moreProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileInfoFragment"
@@ -68,5 +71,28 @@
             android:id="@+id/action_mainFragment_to_profileFragment"
             app:destination="@id/profileFragment"
             app:enterAnim="@android:anim/slide_in_left" />
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mainFragment_self"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreProfileFragment"
+        android:name="com.example.fitness.profile.moreprofile.MoreProfileFragment"
+        android:label="MoreProfileFragment" >
+        <action
+            android:id="@+id/action_moreProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_moreProfileFragment_to_moreProfileInfoFragment"
+            app:destination="@id/moreProfileInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreProfileInfoFragment"
+        android:name="com.example.fitness.profile.moreprofile.MoreProfileInfoFragment"
+        android:label="MoreProfileInfoFragment" >
+        <action
+            android:id="@+id/action_moreProfileInfoFragment_to_moreProfileFragment"
+            app:destination="@id/moreProfileFragment" />
     </fragment>
 </navigation>
