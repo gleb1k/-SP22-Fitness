@@ -22,7 +22,7 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
     private val binding get() = _binding!!
     val gson = GsonBuilder()
         .registerTypeAdapter(LocalDateTime::class.java, LocalDateTimeSerializer())
-        .registerTypeAdapter(LocalDateTime::class.java,LocalDateTimeDeserializer())
+        .registerTypeAdapter(LocalDateTime::class.java, LocalDateTimeDeserializer())
         .create()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -61,12 +61,20 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
             }
             val gender = arrayOf("Мужчина", "Женщина")
             btnSave.setOnClickListener {
-                if (id.toInt() != 2) {
+
+                if (id.toInt() == 0) {
                     profileEditor?.putString(id, "${numberPicker.value}")
                     profileEditor?.apply()
                 }
-                //Только попробуйте это потрогать я вас лично
+
+                if (id.toInt() == 1) {
+                    profileEditor?.putString(id, gender[numberPicker.value])
+                    profileEditor?.apply()
+                }
+
                 if (id.toInt() == 2) {
+                    profileEditor?.putString(id, "${numberPicker.value}")
+                    profileEditor?.apply()
                     var arr: ArrayList<WeightDate> = ArrayList<WeightDate>()
                     val json = weightSharedPref?.getString("WeightDate", null)
                     if (json != null) {
@@ -78,6 +86,11 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
                     val str: String = gson.toJson(arr)
                     editor?.putString("WeightDate", str)
                     editor?.apply()
+                }
+
+                if (id.toInt() == 3) {
+                    profileEditor?.putString(id, "${numberPicker.value}")
+                    profileEditor?.apply()
                 }
                 val bundle: Bundle = if (id.toInt() != 1) {
                     ProfileFragment.createBundle(numberPicker.value.toString(), id)
