@@ -23,9 +23,35 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
     private var _binding: FragmentStatisticsBinding? = null
     private val binding get() = _binding!!
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentStatisticsBinding.bind(view)
+
+        //для подсчёта индекса массы тела
+        val profileSettingsSharedPreferences = activity?.getSharedPreferences(
+            getString(R.string.preference_profilesettings),
+            Context.MODE_PRIVATE
+        )
+
+        val weight=profileSettingsSharedPreferences?.getString("2",null)?.toDoubleOrNull()
+        val height=profileSettingsSharedPreferences?.getString("3",null)?.toDoubleOrNull()
+        if (weight!=null && height!=null){
+            val result=(weight/((height/100)*height/100))
+            if (result>=18 && result<=25){
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}$result-${resources.getString(R.string.MassIndex2)}"
+            }
+            if(result>25){
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}$result-${resources.getString(R.string.MassIndex3)}"
+            }
+            if(result<18){
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}$result-${resources.getString(R.string.MassIndex4)}"
+            }
+        }
+        else{
+            binding.textView2.text="${resources.getString(R.string.BadData)}"
+        }
 
         val weightSharedPref =
             activity!!.getSharedPreferences(
@@ -80,7 +106,9 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
             //анимация добавления данных
             lineChart.animateX(1800, Easing.EaseInExpo)
         }
+
     }
+
 
 }
 

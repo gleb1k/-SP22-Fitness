@@ -21,13 +21,6 @@ object MoreProfileInfoRepository {
         ),
         MoreProfileInfo(
             id = 2,
-            name = "Ваш индекс тела:",
-            value = "",
-            icon = R.drawable.ic_baseline_person_24,
-            url = ""
-        ),
-        MoreProfileInfo(
-            id = 3,
             name = "Сколько стаканов воды в день вы употребляете?(1 стакан=240мл)",
             value = "",
             icon = R.drawable.ic_baseline_local_drink_24,

@@ -19,6 +19,13 @@
     <string name="tasklist">Task list</string>
     <string name="statistics_weight">Your weight changing dynamic</string>
     <string name="MoreInf">More Information</string>
+    <string name="registration">Log In</string>
+    <string name="goback">back</string>
+    <string name="MassIndex">Your Body mass index:</string>
+    <string name="MassIndex2">Normal BMI</string>
+    <string name="BadData">Data entered incorrectly</string>
+    <string name="MassIndex3">Are you overweight</string>
+    <string name="MassIndex4">You are underweight</string>
 
     //Заголовки (возможно не понадобятся)
     <string name="fragment_statistics_name">Statistics</string>

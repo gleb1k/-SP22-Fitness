@@ -60,12 +60,8 @@ class MoreProfileInfoFragment:Fragment(R.layout.fragment_moreprofileinfo) {
                     profileEditor?.apply()
                 }
 
-                if (id.toInt() == 2) {
-                    profileEditor?.putString(id, "${numberPicker.value}")
-                    profileEditor?.apply()
-                }
 
-                if (id.toInt() == 3) {
+                if (id.toInt() == 2) {
                     profileEditor?.putString(id, "${numberPicker.value}")
                     profileEditor?.apply()
                 }
@@ -89,14 +85,8 @@ class MoreProfileInfoFragment:Fragment(R.layout.fragment_moreprofileinfo) {
                 numberPicker.maxValue = 100
                 numberPicker.wrapSelectorWheel = false
             }
-            //Ваш индекс массы тела
-            if (id.toInt() == 2) {
-                numberPicker.minValue = 0
-                numberPicker.maxValue = 100
-                numberPicker.wrapSelectorWheel = false
-            }
             //Сколько стаканов воды в день вы употребляете?
-            if (id.toInt() == 3) {
+            if (id.toInt() == 2) {
                 numberPicker.minValue = 1
                 numberPicker.maxValue = 37
                 numberPicker.wrapSelectorWheel = false

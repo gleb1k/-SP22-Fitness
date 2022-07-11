@@ -48,6 +48,11 @@ class MoreProfileFragment:Fragment(R.layout.fragment_moreprofile) {
                 MoreProfileInfoFragment.createBundle(it.id.toString())
             )
         }
+        binding.buttonBack.setOnClickListener{
+            findNavController().navigate(
+                R.id.action_moreProfileFragment_to_profileFragment)
+        }
+
 
 
         binding.rvProfile2.adapter=adapter
