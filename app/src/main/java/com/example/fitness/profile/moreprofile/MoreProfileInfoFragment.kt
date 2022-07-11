@@ -1,4 +1,4 @@
-package com.example.fitness.profile
+package com.example.fitness.profile.moreprofile
 
 import android.content.Context
 import android.os.Bundle
@@ -9,37 +9,26 @@ import com.example.fitness.LocalDateTimeDeserializer
 import com.example.fitness.R
 import com.example.fitness.WeightDate
 import com.example.fitness.databinding.FragmentProfileinfoBinding
+import com.example.fitness.profile.ProfileFragment
+import com.example.fitness.profile.ProfileInfoRepository
 import com.google.gson.*
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import kotlin.collections.ArrayList
 
-class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
-
+class MoreProfileInfoFragment:Fragment(R.layout.fragment_moreprofileinfo) {
     private var _binding: FragmentProfileinfoBinding? = null
     private val binding get() = _binding!!
-    val gson = GsonBuilder()
-        .registerTypeAdapter(LocalDateTime::class.java, LocalDateTimeSerializer())
-        .registerTypeAdapter(LocalDateTime::class.java,LocalDateTimeDeserializer())
-        .create()
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentProfileinfoBinding.bind(view)
 
-        //Файл для хранения данных об изменении веса пользователя по датам
-        val weightSharedPref = activity!!.getSharedPreferences(
-            getString(R.string.preference_weight),
-            Context.MODE_PRIVATE
-        )
-        val editor = weightSharedPref?.edit()
-
-
-        //Файл хранения информации о пользователе(рост, возраст, пол)
+        //Файл хранения информации о пользователе
         val profileSettingsSharedPreferences = activity?.getSharedPreferences(
-            getString(R.string.preference_profilesettings),
+            getString(R.string.preference_profilemoresettings),
             Context.MODE_PRIVATE
         )
         val profileEditor = profileSettingsSharedPreferences?.edit()
@@ -55,10 +44,9 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
         with(binding) {
             iBtnBack.setOnClickListener {
                 findNavController().navigate(
-                    R.id.action_profileInfoFragment_to_profileFragment
+                    R.id.action_moreProfileInfoFragment_to_moreProfileFragment
                 )
             }
-            val gender = arrayOf("${resources.getString(R.string.Men)}","${resources.getString(R.string.Woman)}")
 
             btnSave.setOnClickListener {
 
@@ -68,64 +56,49 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
                 }
 
                 if (id.toInt() == 1) {
-                    profileEditor?.putString(id, gender[numberPicker.value])
+                    profileEditor?.putString(id, "${numberPicker.value}")
                     profileEditor?.apply()
                 }
 
                 if (id.toInt() == 2) {
                     profileEditor?.putString(id, "${numberPicker.value}")
                     profileEditor?.apply()
-                    var arr: ArrayList<WeightDate> = ArrayList<WeightDate>()
-                    val json = weightSharedPref?.getString("WeightDate", null)
-                    if (json != null) {
-                        val myobj = object : TypeToken<ArrayList<WeightDate>>() {}.type
-                        arr = gson.fromJson<ArrayList<WeightDate>>(json, myobj)
-                    }
-                    val obj = WeightDate(LocalDateTime.now(), numberPicker.value)
-                    arr.add(obj)
-                    val str: String = gson.toJson(arr)
-                    editor?.putString("WeightDate", str)
-                    editor?.apply()
                 }
 
                 if (id.toInt() == 3) {
                     profileEditor?.putString(id, "${numberPicker.value}")
                     profileEditor?.apply()
                 }
-                val bundle: Bundle = if (id.toInt() != 1) {
+                val bundle: Bundle =
                     ProfileFragment.createBundle(numberPicker.value.toString(), id)
-                } else {
-                    ProfileFragment.createBundle(gender[numberPicker.value], id)
-                }
                 findNavController().navigate(
-                    R.id.action_profileInfoFragment_to_profileFragment,
+                    R.id.action_moreProfileInfoFragment_to_moreProfileFragment,
                     bundle
                 )
 
             }
-            //Возраст
+            //Сколько сигарет в день вы выкуриваете?
             if (id.toInt() == 0) {
-                numberPicker.minValue = 14
+                numberPicker.minValue = 0
                 numberPicker.maxValue = 100
                 numberPicker.wrapSelectorWheel = false
             }
-            //Пол
+            //Сколько литров алкоголя в месяц вы употребляете вы употребляете?
             if (id.toInt() == 1) {
                 numberPicker.minValue = 0
-                numberPicker.maxValue = gender.size - 1
+                numberPicker.maxValue = 100
                 numberPicker.wrapSelectorWheel = false
-                numberPicker.displayedValues = gender
             }
-            //Вес
+            //Ваш индекс массы тела
             if (id.toInt() == 2) {
-                numberPicker.minValue = 20
-                numberPicker.maxValue = 250
+                numberPicker.minValue = 0
+                numberPicker.maxValue = 100
                 numberPicker.wrapSelectorWheel = false
             }
-            //Рост
+            //Сколько стаканов воды в день вы употребляете?
             if (id.toInt() == 3) {
-                numberPicker.minValue = 50
-                numberPicker.maxValue = 250
+                numberPicker.minValue = 1
+                numberPicker.maxValue = 37
                 numberPicker.wrapSelectorWheel = false
             }
 

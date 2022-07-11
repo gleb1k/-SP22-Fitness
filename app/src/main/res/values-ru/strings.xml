@@ -17,6 +17,9 @@
     <string name="Men">Мужчина</string>
     <string name="Woman">Женщина</string>
     <string name="tasklist">Список задач</string>
+    <string name="statistics_weight">Динамика изменения вашего веса</string>
+    <string name="MoreInf">Больше информации о профиле</string>
+    <string name="btn_get_started">Начать</string>
     
     //Заголовки (возможно не понадобятся)
     <string name="fragment_statistics_name">Statistics</string>

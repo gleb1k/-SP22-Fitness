@@ -18,6 +18,7 @@
     <string name="Woman">Woman</string>
     <string name="tasklist">Task list</string>
     <string name="statistics_weight">Your weight changing dynamic</string>
+    <string name="MoreInf">More Information</string>
 
     //Заголовки (возможно не понадобятся)
     <string name="fragment_statistics_name">Statistics</string>
@@ -25,6 +26,8 @@
     //Названия файлов хранения 
     <string name="preference_weight">preference_weight</string>
     <string name="preference_profilesettings">preference_profileSettings</string>
+    <string name="preference_profilemoresettings">preference_profilemoreSettings</string>
+
 
     //То, что не нужно переводить
     <string name="imageDescription_arrowBack">Arrow back Icon</string>

@@ -1,4 +1,4 @@
-package com.example.fitness.profile
+package com.example.fitness.profile.moreprofile
 
 import android.content.Context
 import android.os.Bundle
@@ -7,25 +7,23 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.fitness.R
-import com.example.fitness.databinding.FragmentProfileBinding
+import com.example.fitness.databinding.FragmentMoreprofileBinding
 
-class ProfileFragment : Fragment(R.layout.fragment_profile) {
-    private var _binding: FragmentProfileBinding? = null
+class MoreProfileFragment:Fragment(R.layout.fragment_moreprofile) {
+    private var _binding: FragmentMoreprofileBinding? = null
     private val binding get() = _binding!!
 
-    private var adapter: ProfileInfoAdapter? = null
+    private var adapter: MoreProfileInfoAdapter? = null
 
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentProfileBinding.bind(view)
+        _binding = FragmentMoreprofileBinding.bind(view)
 
-        //Файл хранения информации о пользователе(рост, возраст, пол)
-        val profileSettingsSharedPreferences = activity?.getSharedPreferences(
-            getString(R.string.preference_profilesettings),
-            Context.MODE_PRIVATE
-        )
+        //Файл хранения информации о пользователе по датам(кол-во воды, индекст массы тела)
+        val profileSettingsSharedPreferences2 = activity?.getSharedPreferences(getString(R.string.preference_profilemoresettings),
+            Context.MODE_PRIVATE)
 
         //Принимаю значение от инфыпрофиля и айди тоже надо бы
         val valueId = arguments?.getString(ARG_TEXT).orEmpty()
@@ -35,27 +33,24 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             val arr = valueId.split(" ")
             val value = arr[0]
             val id = arr[1]
-            ProfileInfoRepository.infoList[id.toInt()].value = value
+            MoreProfileInfoRepository.infoList[id.toInt()].value = value
         }
 
         //recycler
-        adapter = ProfileInfoAdapter(
-            profileSettingsSharedPreferences,
-            ProfileInfoRepository.infoList,
+        adapter = MoreProfileInfoAdapter(
+            profileSettingsSharedPreferences2,
+            MoreProfileInfoRepository.infoList,
             Glide.with(this),
         )
         {
             findNavController().navigate(
-                R.id.action_profileFragment_to_profileInfoFragment,
-                ProfileInfoFragment.createBundle(it.id.toString())
+                R.id.action_moreProfileFragment_to_moreProfileInfoFragment,
+                MoreProfileInfoFragment.createBundle(it.id.toString())
             )
         }
-        binding.buttonMoreInf.setOnClickListener{
-            findNavController().navigate(
-                R.id.action_profileFragment_to_moreProfileFragment)
-        }
 
-        binding.rvProfile.adapter = adapter
+
+        binding.rvProfile2.adapter=adapter
     }
 
     companion object {
