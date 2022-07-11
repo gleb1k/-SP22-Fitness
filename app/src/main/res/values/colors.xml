@@ -23,6 +23,7 @@
     <color name="background">#121212</color>
     <color name="primaryVariant">#9E85379F</color>
     <color name="onPrimary">#000000</color>
+    <color name="textGray">#AEFFFFFF</color>
 
 
 </resources>
