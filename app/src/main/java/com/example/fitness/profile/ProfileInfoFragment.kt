@@ -38,25 +38,28 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
             // TODO: Тимуру нужно узнать как сделать перевод этого текста на англ
             binding.tvName.text =
                 "Укажите свой ${ProfileInfoRepository.infoList[id.toInt()].name.lowercase()}"
-        }
-        with(binding) {
-            iBtnBack.setOnClickListener {
-                findNavController().navigate(
-                    R.id.action_profileInfoFragment_to_profileFragment
-                )
+            if (id.isNotEmpty()) {
+                binding.tvName.text =
+                    "${resources.getString(R.string.text1)} ${ProfileInfoRepository.infoList[id.toInt()].name.lowercase()}"
             }
-            val gender = arrayOf("Мужчина", "Женщина")
-            btnSave.setOnClickListener {
-                val bundle: Bundle = if (id.toInt() != 1) {
-                    ProfileFragment.createBundle(numberPicker.value.toString(), id)
-                } else {
-                    ProfileFragment.createBundle(gender[numberPicker.value], id)
+            with(binding) {
+                iBtnBack.setOnClickListener {
+                    findNavController().navigate(
+                        R.id.action_profileInfoFragment_to_profileFragment
+                    )
                 }
-                findNavController().navigate(
-                    R.id.action_profileInfoFragment_to_profileFragment,
-                    bundle
-                )
-            }
+                val gender = arrayOf("Мужчина", "Женщина")
+                btnSave.setOnClickListener {
+                    val bundle: Bundle = if (id.toInt() != 1) {
+                        ProfileFragment.createBundle(numberPicker.value.toString(), id)
+                    } else {
+                        ProfileFragment.createBundle(gender[numberPicker.value], id)
+                    }
+                    findNavController().navigate(
+                        R.id.action_profileInfoFragment_to_profileFragment,
+                        bundle
+                    )
+                }
                 //Возраст
                 if (id.toInt() == 0) {
                     numberPicker.minValue = 14
@@ -83,6 +86,7 @@ class ProfileInfoFragment : Fragment(R.layout.fragment_profileinfo) {
                     numberPicker.wrapSelectorWheel = false
                 }
 
+            }
         }
     }
 

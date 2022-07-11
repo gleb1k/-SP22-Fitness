@@ -1,18 +1,27 @@
 <resources>
     <string name="app_name">Fitness</string>
 
-    <string name="btn_save">Сохранить</string>
-    <string name="profile_name">Имя</string>
-    <string name="profile_age">Возраст</string>
-    <string name="profile_weight">Вес</string>
-    <string name="profile_gender">Пол</string>
-    <string name="profile">Профиль</string>
-    <string name="btn_get_started">Начать тренировку</string>
-
+    <string name="btn_save">Save</string>
+    <string name="profile_name">Name</string>
+    <string name="profile_age">Age</string>
+    <string name="profile_weight">Weight</string>
+    <string name="profile_gender">Gender of the person</string>
+    <string name="profile">Profile</string>
+    <string name="profile_title">Human info</string>
+    <string name="settings2">Settings</string>
+    <string name="trainings">Trainings</string>
+    <string name="statistics">Statistics</string>
+    <string name="days">Days</string>
+    <string name="text1">Specify your</string>
+    <string name="text2">My Type</string>
+    <string name="Men">Men</string>
+    <string name="Woman">Woman</string>
+    <string name="tasklist">Task list</string>
+    
     //Заголовки (возможно не понадобятся)
     <string name="fragment_statistics_name">Statistics</string>
-    
-    //Названия файлов хранения 
+
+    //Названия файлов хранения
     <string name="preference_weight">preference_weight</string>
     <string name="preference_profilesettings">preference_profileSettings</string>
 </resources>

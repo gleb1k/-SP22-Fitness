@@ -5,17 +5,17 @@
         android:id="@id/settingsFragment"
         android:enabled="true"
         android:icon="@drawable/ic_settings"
-        android:title="settings"/>
+        android:title="@string/settings2"/>
     <item
         android:id="@id/trainingsFragment"
         android:enabled="true"
         android:icon="@drawable/ic_trainings"
-        android:title="trainings"/>
+        android:title="@string/trainings"/>
     <item
         android:id="@id/statisticsFragment"
         android:enabled="true"
         android:icon="@drawable/ic_statistics"
-        android:title="statistics"/>
+        android:title="@string/statistics"/>
     <item
         android:id="@id/profileFragment"
         android:enabled="true"
