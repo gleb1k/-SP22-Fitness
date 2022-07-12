@@ -58,7 +58,11 @@
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.fitness.trainings.SecondFragment"
-        android:label="SecondFragment" />
+        android:label="SecondFragment" >
+        <action
+            android:id="@+id/action_secondFragment_to_trainingsFragment"
+            app:destination="@id/trainingsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.fitness.MainFragment"
