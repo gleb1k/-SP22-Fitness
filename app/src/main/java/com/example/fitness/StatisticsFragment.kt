@@ -16,6 +16,7 @@ import com.google.gson.*
 import com.google.gson.internal.bind.util.ISO8601Utils.format
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
+import java.math.RoundingMode
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.time.ZoneOffset
@@ -42,14 +43,15 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
         val height=profileSettingsSharedPreferences?.getString("3",null)?.toDoubleOrNull()
         if (weight!=null && height!=null){
             val result=(weight/((height/100)*height/100))
-            if (result>=18 && result<=25){
-                binding.textView2.text="${resources.getString(R.string.MassIndex)}\n$result-${resources.getString(R.string.MassIndex2)}"
+            val roundedUp=result.toBigDecimal().setScale(1,RoundingMode.UP).toDouble()
+            if (roundedUp>=18 && roundedUp<=25){
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}\n$roundedUp${resources.getString(R.string.MassIndex2)}"
             }
             if(result>25){
-                binding.textView2.text="${resources.getString(R.string.MassIndex)}\n$result-${resources.getString(R.string.MassIndex3)}"
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}\n$roundedUp${resources.getString(R.string.MassIndex3)}"
             }
             if(result<18){
-                binding.textView2.text="${resources.getString(R.string.MassIndex)}\n$result-${resources.getString(R.string.MassIndex4)}"
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}\n$roundedUp${resources.getString(R.string.MassIndex4)}"
             }
         }
         else{

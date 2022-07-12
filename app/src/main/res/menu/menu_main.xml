@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@id/trainingsFragment"
-        android:enabled="true"
-        android:icon="@drawable/ic_trainings"
-        android:title="@string/trainings"/>
-    <item
         android:id="@id/statisticsFragment"
         android:enabled="true"
         android:icon="@drawable/ic_statistics"
         android:title="@string/statistics"/>
+    <item
+        android:id="@id/trainingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_trainings"
+        android:title="@string/trainings"/>
     <item
         android:id="@id/profileFragment"
         android:enabled="true"
