@@ -53,19 +53,19 @@ object TrainingRepository {
             "111"
         ),
         Training(
-            1,
+            2,
             "Верхняя часть тела",
             "up_w",
             "111"
         ),
         Training(
-            2,
+            3,
             "Нижняя часть тела",
             "down_w",
             "111"
         ),
         Training(
-            3,
+            1,
             "Комплекс",
             "complex_w",
             "111"
