@@ -98,7 +98,7 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
         //настройка отображения графика
         with(binding) {
             //угол поворота по ОХ
-            lineChart.xAxis.labelRotationAngle = 0f
+            lineChart.xAxis.labelRotationAngle = 0F
             //удаление правой оси
             lineChart.axisRight.isEnabled = false
             //Позволяет зумить график
