@@ -13,10 +13,6 @@
             app:destination="@id/secondFragment" />
     </fragment>
     <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.example.fitness.SettingsFragment"
-        android:label="SettingsFragment" />
-    <fragment
         android:id="@+id/statisticsFragment"
         android:name="com.example.fitness.StatisticsFragment"
         android:label="StatisticsFragment" />

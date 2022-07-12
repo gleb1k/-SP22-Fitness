@@ -39,7 +39,7 @@ class MoreProfileInfoFragment:Fragment(R.layout.fragment_moreprofileinfo) {
 
         if (id.isNotEmpty()) {
             binding.tvName.text =
-                "${resources.getString(R.string.text1)} ${ProfileInfoRepository.infoList[id.toInt()].name.lowercase()}"
+                "${resources.getString(R.string.text3)} ${MoreProfileInfoRepository.infoList[id.toInt()].name.lowercase()}"
         }
         with(binding) {
             iBtnBack.setOnClickListener {

@@ -13,19 +13,20 @@
     <string name="statistics">Statistics</string>
     <string name="days">Days</string>
     <string name="text1">Specify your</string>
+    <string name="text3">Specify</string>
     <string name="text2">My Type</string>
     <string name="Men">Men</string>
     <string name="Woman">Woman</string>
     <string name="tasklist">Task list</string>
-    <string name="statistics_weight">Your weight changing dynamic</string>
+    <string name="statistics_weight">Your weight changing dynamic:</string>
     <string name="MoreInf">More Information</string>
     <string name="registration">Log In</string>
     <string name="goback">back</string>
     <string name="MassIndex">Your Body mass index:</string>
-    <string name="MassIndex2">Normal BMI</string>
+    <string name="MassIndex2">\mNormal BMI😉</string>
     <string name="BadData">Data entered incorrectly</string>
-    <string name="MassIndex3">Are you overweight</string>
-    <string name="MassIndex4">You are underweight</string>
+    <string name="MassIndex3">\mAre you overweight😬</string>
+    <string name="MassIndex4">\nYou are underweight😰</string>
 
     //Добавила для главного экрана
     <string name="log_in">Log in</string>

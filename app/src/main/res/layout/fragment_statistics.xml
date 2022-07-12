@@ -4,21 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
         android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
         android:text="@string/statistics_weight"
+        android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/lineChart"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.github.mikephil.charting.charts.LineChart
         android:background="@color/white"
@@ -35,10 +38,16 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="90dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
         android:text=""
+        android:textColor="@color/white"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

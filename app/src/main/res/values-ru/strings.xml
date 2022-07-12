@@ -17,6 +17,7 @@
     <string name="Men">Мужчина</string>
     <string name="Woman">Женщина</string>
     <string name="tasklist">Список задач</string>
+    <string name="text3">Укажите</string>
 
     //Добавила для главного экрана
     <string name="log_in">Зарегистрироваться</string>
@@ -24,16 +25,16 @@
     <string name="energize">Наполни свою жизнь энергией</string>
     <string name="do_sport">Займись спортом! Займись собой!</string>
 
-    <string name="statistics_weight">Динамика изменения вашего веса</string>
+    <string name="statistics_weight">Динамика изменения вашего веса:</string>
     <string name="MoreInf">Больше информации о профиле</string>
     <string name="btn_get_started">Начать</string>
     <string name="registration">Зарегистрироваться</string>
     <string name="goback">Вернуться назад</string>
     <string name="MassIndex">Ваш индекс массы тела:</string>
-    <string name="MassIndex2">Нормальный ИМТ</string>
+    <string name="MassIndex2">\nНормальный ИМТ😉</string>
     <string name="BadData">Данные введены неккоректно</string>
-    <string name="MassIndex3">У вас избыточный вес</string>
-    <string name="MassIndex4">У вас недостаточный вес</string>
+    <string name="MassIndex3">\nУ вас избыточный вес😬</string>
+    <string name="MassIndex4">\nУ вас недостаточный вес😰</string>
 
     //Заголовки (возможно не понадобятся)
     <string name="fragment_statistics_name">Statistics</string>
