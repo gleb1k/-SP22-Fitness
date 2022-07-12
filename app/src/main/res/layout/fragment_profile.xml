@@ -86,6 +86,8 @@
         android:id="@+id/buttonMoreInf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/textGray"
         android:text="@string/MoreInf"
         app:layout_constraintBottom_toBottomOf="@+id/rv_profile"
         app:layout_constraintEnd_toEndOf="parent"

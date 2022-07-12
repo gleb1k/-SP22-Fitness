@@ -43,13 +43,13 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
         if (weight!=null && height!=null){
             val result=(weight/((height/100)*height/100))
             if (result>=18 && result<=25){
-                binding.textView2.text="${resources.getString(R.string.MassIndex)}$result-${resources.getString(R.string.MassIndex2)}"
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}\n$result-${resources.getString(R.string.MassIndex2)}"
             }
             if(result>25){
-                binding.textView2.text="${resources.getString(R.string.MassIndex)}$result-${resources.getString(R.string.MassIndex3)}"
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}\n$result-${resources.getString(R.string.MassIndex3)}"
             }
             if(result<18){
-                binding.textView2.text="${resources.getString(R.string.MassIndex)}$result-${resources.getString(R.string.MassIndex4)}"
+                binding.textView2.text="${resources.getString(R.string.MassIndex)}\n$result-${resources.getString(R.string.MassIndex4)}"
             }
         }
         else{
