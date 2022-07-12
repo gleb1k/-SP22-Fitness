@@ -85,7 +85,7 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
                 arr[i].Weight.toFloat())
             )
         }
-        val vl = LineDataSet(entries, "My Type")
+        val vl = LineDataSet(entries, "Ваш вес")
 
         vl.setDrawValues(false)
         vl.setDrawFilled(true)
@@ -101,15 +101,15 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
             lineChart.xAxis.labelRotationAngle = 0f
             //удаление правой оси
             lineChart.axisRight.isEnabled = false
-            lineChart.xAxis.axisMaximum = 0.1f
             //Позволяет зумить график
-            lineChart.setTouchEnabled(true)
+            lineChart.setTouchEnabled(false)
             lineChart.setPinchZoom(false)
-            //Легенда графика и надпись при ошибке выборки данных
-            lineChart.description.text = "${resources.getString(R.string.days)}"
-            lineChart.setNoDataText("No forex yet!")
+            //Легенда графика
+            lineChart.xAxis.isEnabled = false
+            lineChart.description.isEnabled = false
+            // и надпись при ошибке выборки данных
+            lineChart.setNoDataText("Нет данных!")
             //анимация добавления данных
-            lineChart.animateX(1800, Easing.EaseInExpo)
         }
     }
 

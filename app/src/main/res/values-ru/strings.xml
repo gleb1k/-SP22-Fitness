@@ -32,7 +32,7 @@
     <string name="goback">Вернуться назад</string>
     <string name="MassIndex">Ваш индекс массы тела:</string>
     <string name="MassIndex2">\nНормальный ИМТ😉</string>
-    <string name="BadData">Данные введены неккоректно</string>
+    <string name="BadData">Нет данных для подсчета ИМТ</string>
     <string name="MassIndex3">\nУ вас избыточный вес😬</string>
     <string name="MassIndex4">\nУ вас недостаточный вес😰</string>
 
